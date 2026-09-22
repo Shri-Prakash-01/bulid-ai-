@@ -1,0 +1,161 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface-container: #eaedff;
+  --color-on-primary: #ffffff;
+  --color-on-tertiary-container: #fffbff;
+  --color-tertiary-fixed: #e1e0ff;
+  --color-inverse-surface: #283044;
+  --color-surface-container-low: #f2f3ff;
+  --color-on-tertiary-fixed: #07006c;
+  --color-on-tertiary-fixed-variant: #2f2ebe;
+  --color-background: #faf8ff;
+  --color-tertiary: #4648d4;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-error-container: #93000a;
+  --color-surface-bright: #faf8ff;
+  --color-primary: #0058be;
+  --color-secondary-container: #6cf8bb;
+  --color-on-secondary-fixed-variant: #005236;
+  --color-error-container: #ffdad6;
+  --color-on-primary-fixed: #001a42;
+  --color-error: #ba1a1a;
+  --color-on-background: #131b2e;
+  --color-inverse-on-surface: #eef0ff;
+  --color-primary-fixed: #d8e2ff;
+  --color-tertiary-container: #6063ee;
+  --color-surface-container-highest: #dae2fd;
+  --color-secondary-fixed-dim: #4edea3;
+  --color-secondary: #006c49;
+  --color-on-primary-container: #fefcff;
+  --color-primary-container: #2170e4;
+  --color-on-surface: #131b2e;
+  --color-surface-container-high: #e2e7ff;
+  --color-primary-fixed-dim: #adc6ff;
+  --color-secondary-fixed: #6ffbbe;
+  --color-surface: #faf8ff;
+  --color-on-tertiary: #ffffff;
+  --color-surface-dim: #d2d9f4;
+  --color-surface-variant: #dae2fd;
+  --color-outline-variant: #c2c6d6;
+  --color-on-secondary-fixed: #002113;
+  --color-tertiary-fixed-dim: #c0c1ff;
+  --color-outline: #727785;
+  --color-on-primary-fixed-variant: #004395;
+  --color-on-secondary-container: #00714d;
+  --color-on-secondary: #ffffff;
+  --color-inverse-primary: #adc6ff;
+  --color-on-surface-variant: #424754;
+  --color-on-error: #ffffff;
+  --color-surface-tint: #005ac2;
+
+  --font-display: 'Geist', 'Inter', sans-serif;
+  --font-body-md: 'Inter', sans-serif;
+  --font-body-lg: 'Inter', sans-serif;
+  --font-headline-md: 'Geist', sans-serif;
+  --font-headline-lg: 'Geist', sans-serif;
+  --font-label-md: 'Geist', sans-serif;
+  --font-label-sm: 'Geist', sans-serif;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #faf8ff;
+  color: #131b2e;
+  -webkit-font-smoothing: antialiased;
+  min-height: max(884px, 100dvh);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 4px 18px -1px rgba(0, 0, 0, 0.04), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  box-shadow: 0 16px 30px -5px rgba(0, 0, 0, 0.06), 0 8px 12px -5px rgba(0, 0, 0, 0.03);
+  transform: translateY(-2px);
+}
+
+.hero-gradient {
+  background: radial-gradient(circle at 50% 50%, rgba(0, 88, 190, 0.07) 0%, transparent 70%);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes rotate-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-rotate-slow {
+  animation: rotate-slow 12s linear infinite;
+}
+
+.step-transition {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.requirement-card.active {
+  background: #2170e4;
+  color: white;
+  border-color: transparent;
+}
+
+.requirement-card.active .material-symbols-outlined {
+  color: white;
+}
+
+.progress-bar {
+  transition: width 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  background: #0058be;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.15);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+.timeline-line::before {
+  content: '';
+  position: absolute;
+  left: 11px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #e2e8f0;
+  z-index: 0;
+}
