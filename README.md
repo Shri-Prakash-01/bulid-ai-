@@ -409,8 +409,8 @@ cp .env.example .env
 Edit `.env`:
 
 ```env
-VITE_OPENROUTER_API_KEY=sk-or-v1-your-key-here
-OPENROUTER_API_KEY=sk-or-v1-your-key-here
+VITE_OPENROUTER_API_KEY=
+OPENROUTER_API_KEY=
 ```
 
 Both vars are needed — `VITE_` prefix for the frontend (Vite), plain for the Node backend.
